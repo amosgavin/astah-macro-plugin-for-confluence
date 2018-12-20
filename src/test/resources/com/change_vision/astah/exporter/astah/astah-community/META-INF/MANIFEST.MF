@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.4
+Created-By: 1.7.0_45-b18 (Oracle Corporation)
+Main-Class: JP.co.esm.caddies.jomt.Jude
+SplashScreen-Image: JP/co/esm/caddies/jomt/resource/images/astah_splas
+ h_community.png
+Build-Number: 201401291753
+Edition: community
+Class-Path: . jre/lib/tools.jar tools.jar lib/jna.jar lib/platform.jar
+  lib/platform-connectors.jar lib/org.apache.xerces.jar lib/org.apache
+ .felix.framework.jar lib/commons-cli.jar lib/commons-collections.jar 
+  lib/log4j-over-slf4j-1.6.6.jar lib/jcl-over-slf4j-1.6.6.jar lib/logb
+ ack-loader-1.0.9b.jar lib/slf4j-api-1.6.6.jar jre/lib/jfxrt.jar ../Pl
+ ugIns/JDK/Contents/Home/jre/lib/jfxrt.jar lib/jfxrt.jar
+

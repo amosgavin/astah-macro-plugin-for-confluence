@@ -16,7 +16,7 @@ public class AstahBaseDirectory {
     private final Util util = new Util();
 
     public AstahBaseDirectory(BootstrapManager bootstrapManager){
-        astahBase = new File(bootstrapManager.getConfluenceHome(), "astah");
+        astahBase = new File("/Users/macos/Documents/YY/workspace/java/astah-macro-plugin-for-confluence/target/test-classes/com/change_vision/astah/exporter/astah");
     }
 
     public File getDirectory(){
@@ -28,11 +28,11 @@ public class AstahBaseDirectory {
     }
     
     private File getCommunityJar() {
-        return new File(astahBase,"astah-community.jar");
+        return new File(astahBase+"/astah-community.jar");
     }
 
     private File getGsnJar() {
-    	return new File(astahBase,"astah-gsn.jar");
+    	return new File(astahBase+"/astah-gsn.jar");
     }
 
     public File getAstahJar(File file) {

@@ -9,7 +9,7 @@ public class ExportBaseDirectory {
     private final File exportBase;
     
     public ExportBaseDirectory(BootstrapManager bootstrapManager){
-        exportBase = new File(bootstrapManager.getConfluenceHome(), "astah-exported");
+        exportBase = new File("/Users/macos/Documents/YY/workspace/java/astah-macro-plugin-for-confluence/target/test-classes/com/change_vision/astah/exporter/", "astah-exported");
     }
     
     public File getDirectory(){

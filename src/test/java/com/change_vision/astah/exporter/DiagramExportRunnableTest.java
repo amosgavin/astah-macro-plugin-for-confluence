@@ -59,6 +59,7 @@ public class DiagramExportRunnableTest {
 
     private File outputFolder;
 
+    private static final String FILENAME= "test.asta";
     @Before
     public void before() throws Exception {
         MockitoAnnotations.initMocks(this);
@@ -69,13 +70,13 @@ public class DiagramExportRunnableTest {
 
         when(exportBase.getDirectory()).thenReturn(folder.newFolder());
 
-        folder.newFile("test.asta");
+        folder.newFile(FILENAME);
         outputFolder = folder.getRoot();
 
         {
             when(attachment.getId()).thenReturn(random.nextLong());
             when(attachment.getVersion()).thenReturn(1);
-            when(attachment.getFileName()).thenReturn("test.asta");
+            when(attachment.getFileName()).thenReturn(FILENAME);
             InputStream stream = DiagramExportRunnableTest.class.getResourceAsStream("Sample.asta");
             when(attachment.getContentsAsStream()).thenReturn(stream);
         }
@@ -91,7 +92,7 @@ public class DiagramExportRunnableTest {
         {
             when(noDiagramsAttachment.getId()).thenReturn(random.nextLong());
             when(noDiagramsAttachment.getVersion()).thenReturn(1);
-            when(noDiagramsAttachment.getFileName()).thenReturn("test.asta");
+            when(noDiagramsAttachment.getFileName()).thenReturn(FILENAME);
             InputStream stream = DiagramExportRunnableTest.class.getResourceAsStream("dependency.asta");
             when(noDiagramsAttachment.getContentsAsStream()).thenReturn(stream);
         }
@@ -99,7 +100,7 @@ public class DiagramExportRunnableTest {
         {
             when(errorAttachment.getId()).thenReturn(random.nextLong());
             when(errorAttachment.getVersion()).thenReturn(1);
-            when(errorAttachment.getFileName()).thenReturn("test.asta");
+            when(errorAttachment.getFileName()).thenReturn(FILENAME);
             InputStream stream = DiagramExportRunnableTest.class.getResourceAsStream("test.txt");
             when(errorAttachment.getContentsAsStream()).thenReturn(stream);
         }

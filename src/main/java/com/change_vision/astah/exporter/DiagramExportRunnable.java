@@ -105,6 +105,7 @@ public class DiagramExportRunnable implements Runnable {
         addSettingFromFile(javaCommand, commands);
         commands.add("-Djava.awt.headless=true");
         commands.add("-Dcheck_jvm_version=false");
+        commands.add("-Dfile.encoding=GBK");
         commands.add("-cp");
         commands.add(astahBase.getAstahJar(file).getAbsolutePath());
         commands.add("com.change_vision.jude.cmdline.JudeCommandRunner");
@@ -148,7 +149,7 @@ public class DiagramExportRunnable implements Runnable {
     private void logProcessOutput(InputStream is) {
         BufferedReader reader = null;
         try {
-            InputStreamReader inputStreamReader = new InputStreamReader(is);
+            InputStreamReader inputStreamReader = new InputStreamReader(is, "GBK");
             reader = new BufferedReader(inputStreamReader);
             String line;
             while (null != (line = reader.readLine())) {

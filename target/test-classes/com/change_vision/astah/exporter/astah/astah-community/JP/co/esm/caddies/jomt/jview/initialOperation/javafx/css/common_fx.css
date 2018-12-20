@@ -1,0 +1,24 @@
+.createDiagramLabel {
+	-fx-label-padding: 0 0 0 12px;
+	-fx-font-family: Meiryo;
+}
+
+.createDiagramLabel:hover {
+	-fx-text-fill: #555;
+}
+ 
+.recentProjectLabel {
+	-fx-label-padding: 0 0 0 12px;
+	-fx-font-family: Meiryo;
+	-fx-text-fill: #fff;
+	-fx-underline: true;
+	-fx-wrap-text: true;
+}
+
+.recentProjectLabel:hover {
+	-fx-text-fill: #eee;
+}
+ 
+.mouseHover {
+	-fx-cursor: hand;
+}
